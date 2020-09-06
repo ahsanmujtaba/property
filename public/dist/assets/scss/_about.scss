@@ -1,0 +1,292 @@
+/*-------
+    07. About US Css
+-----------------------------*/
+.about-content {
+    & h2 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        margin-bottom: 27px;
+        & span {
+            &.tc-1 {
+                color: $theme-color;
+            }
+            &.tc-2 {
+                color: $theme-color-2;
+            }
+        }
+        @media #{$large-mobile}{
+            & br {
+                display: none;
+            }
+            font-size: 26px;
+            line-height: 30px;
+        }
+        @media #{$tablet-device}{
+            & br {
+                display: none;
+            }
+            font-size: 28px;
+        }
+    }
+    & p {
+        max-width: 454px;
+        margin-bottom: 46px;
+    }
+    &.pl-65 {
+        @media #{$large-mobile,$small-mobile}{
+            padding-left: 15px !important;
+        }
+    }
+    
+}
+
+.about-feature {
+    & .icon {
+        width: 44px;
+        float: left;
+        margin-top: 5px;
+        & img {
+            max-width: 100%;
+        }
+    }
+    & .content , .content-two {
+        overflow: hidden;
+        & h4 {
+            font-weight: 700;
+        }
+        & p {
+            margin: 0;
+            max-width: 195px;
+        }
+        &-two {
+            & p {
+                margin: 0;
+                max-width: 248px;
+            }
+        }
+    }
+}
+.counter-bg {
+    background: url("../images/bg/counter-bg.jpg");
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-size: auto;
+    @media #{$desktop-device,$tablet-device,$large-mobile}{
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.about-properties-slider {
+    overflow: hidden;
+    & .slick-list {
+        margin: -30px;
+    }
+    & .slick-dots {
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+        width: 100%;
+        display: flex !important;
+        justify-content: flex-start;
+        left: 50px;
+        @media #{$tablet-device,$small-mobile}{
+            width: 85px;
+        }
+        & li {
+            margin: 0 10px;
+            & button {
+                font-size: 16px;
+                font-weight: 700;
+                color: #999999;
+                line-height: 1;
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                &::before {
+                    content: "0";
+                }
+            }
+            
+            &.slick-active {
+                & button {
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $theme-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.about-properties-area {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    & .about-slider_bg {
+        background: #f3f3f3;
+        width: 260px;
+        height: 300px;
+        position: absolute;
+        bottom: 0;
+        @media #{$tablet-device,$small-mobile}{
+            width: 220px;
+            height: 220px;
+        }
+    }
+}
+.about-properties-item {
+    padding-left: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    /*margin: 30px;*/
+    
+    & .image {
+	    box-shadow: 0px 18px 35.2px 4.8px rgba(5, 52, 74, 0.19); 
+        transition: all 0.5s ease 0s;
+        & img {
+            width: 100%;
+        }
+    }
+    
+    &.slick-active {
+        & .image {
+            left: 0;
+        }
+        & .content {
+            left: 0;
+        }
+    }
+    @media #{$tablet-device,$small-mobile}{
+        padding-left: 65px;
+        & .content {
+            padding: 20px 20px;
+            & h3 {
+                font-size: 20px;
+            }
+            & h4 {
+            }
+            
+        }
+        
+    }
+}
+
+.choose-properties {
+    @media #{$tablet-device}{
+        max-width: 500px;
+        margin: 0px auto 30px;
+    }
+}
+
+.choose-provide {
+    padding-left: 150px;
+    padding-top: 90px;
+    padding-right: 40px;
+    position: relative;
+    text-align: center;
+    
+    @media #{$desktop-device}{
+        padding-left: 150px;
+        padding-top: 140px;
+        padding-right: 0px;
+    }
+    @media #{$large-mobile}{
+        padding-right: 0px;
+        padding-top: 150px;
+        margin-bottom: 40px;
+    }
+    @media #{$small-mobile}{
+        padding-left: 54px;
+        padding-top: 90px;
+        padding-right: 0px;
+        margin-bottom: 40px;
+    }
+    
+    & .price-box {
+        & p {
+            background: #fff;
+            box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            color: $theme-color;
+            font-size: 24px;
+            padding: 22px;
+            border-radius: 0 0 10px 10px; 
+            font-weight: 600;
+            @media #{$small-mobile}{
+                font-size: 20px;
+            }
+        }
+    }
+    & .image-1 {
+        & img {
+            width: 100%;
+        }
+    }
+    & .image-2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        & img {
+            width: 100%;
+        }
+        @media #{$small-mobile}{
+            right: 64px;
+        }
+    }
+}
+.about-provide {
+    position: relative;
+    & .image-1 {
+        position: relative;
+        padding-bottom: 50px;
+    }
+    & .image-2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.counter {
+    color: $theme-color;
+    & .counter-active {
+        position: relative;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 0.8;
+        color: $theme-color;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        &::after {
+            position: absolute;
+            top: 0;
+            right: -35px;
+            content: "+";
+        }
+        @media #{$small-mobile}{
+            font-size: 50px;
+        }
+    }
+}
+.discount-stryker, .discount-stryker-2 {
+    position: absolute;
+    top: 15px;
+    left: -30px;
+    z-index: 1;
+    background: rgba(64, 174, 226, 0.9);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    transform: rotate(-35deg);
+    @media #{$tablet-device,$large-mobile}{
+        display: none;
+    }
+}
+.discount-stryker-2 {
+    left: -15px;
+}

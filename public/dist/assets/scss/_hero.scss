@@ -1,0 +1,225 @@
+/*---------------------------------------
+    05. Hero
+-----------------------------------------*/
+.hero-section {
+    position: relative;
+}
+
+/*--
+    05.1 Hero Slider One
+-----------------------------------------*/
+/*-- Hero Slider --*/
+.hero-slider-one {
+    /*-- Arrow --*/
+    & .slick-arrow {
+        display: none !important;
+    }
+    /*-- Dots --*/
+    & .slick-dots {
+        display: none !important;
+    }
+}
+
+/*-- Hero Item --*/
+.hero-slide-item {
+    height: 770px;
+    display: flex !important;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    @media #{$laptop-device}{
+        height: 670px;
+    }
+    @media #{$desktop-device}{
+        height: 520px;
+    }
+    @media #{$tablet-device}{
+        height: 420px;
+    }
+    @media #{$large-mobile}{
+        height: 420px;
+    }
+    
+}
+/*--
+    05.2 Hero Slider Two
+-----------------------------------------*/
+.hero-slide-item-2 {
+    
+    @media #{$laptop-device}{
+        
+    }
+    @media #{$desktop-device}{
+        padding: 100px 0 100px;
+    }
+    @media #{$tablet-device}{
+        padding: 80px 0 80px;
+    }
+    @media #{$large-mobile}{
+        padding: 60px 0 60px;
+    }
+}
+
+/*-- Hero Content --*/
+.hero-content {
+    
+    background: rgba(0, 0, 0, 0.7);
+    padding: 60px 55px;
+    color: $white;
+    @media #{$large-mobile}{
+        order: 2;
+        margin-top: 30px;
+        padding: 25px 20px;
+    }
+    
+    // All Element Selector
+    & > * {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-name: fadeOutUp;
+    }
+    
+    & h1 {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 60px;
+        margin: 0;
+        color: #ffff;
+        
+        // Responsive
+        @media #{$desktop-device}{
+            font-size: 46px;
+        }
+        @media #{$tablet-device}{
+            font-size: 46px;
+        }
+        @media #{$large-mobile}{
+            font-size: 32px;
+            line-height: 40px;
+        }
+        @media #{$small-mobile}{
+        }
+    }
+    
+    
+}
+
+/*-- Slide Content In Animation --*/
+.slick-active {
+    /*-- Hero Content --*/
+    & .hero-content {
+
+        // All Element Selector
+        & > * {
+            animation-name: fadeInUp;
+            
+            // Child Selector
+            &:nth-child(1) {
+                animation-delay: 0.5s;
+            }
+            &:nth-child(2) {
+                animation-delay: 1s;
+            }
+            &:nth-child(3) {
+                animation-delay: 1.5s;
+            }
+            &:nth-child(4) {
+                animation-delay: 2s;
+            }
+            &:nth-child(5) {
+                animation-delay: 2.5s;
+            }
+            &:nth-child(6) {
+                animation-delay: 3s;
+            }
+            
+        }
+    }
+    
+}
+
+
+.hero-one-social {
+    position: absolute;
+    left: 110px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1px;
+    
+    & a {
+        width: 27px;
+        height: 27px;
+        border: 1px solid #989898;
+        border-radius: 50%;
+        display: block;
+        text-align: center;
+        color: $theme-color;
+        margin: 9px 0;
+        & i {
+            font-size: 12px;
+            line-height: 25px;
+        }
+        &:hover {
+            border-color: $theme-color-2;
+            background-color: $theme-color-2;
+            color: $white;
+        }
+    }
+    
+    @media #{$tablet-device,$large-mobile}{
+        left: 30px;
+    }
+    @media #{$small-mobile}{
+        display: none;
+    }
+}
+
+.wrap_controls {
+    display: none;
+}
+.home-3-map {
+    position: relative;
+}
+.find-home-box {
+    padding-right: 15px;
+    padding-left: 15px;
+    position: absolute;
+    left: auto;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition-duration: .3s;
+}
+.add-property-btn > a {
+   /* background: $theme-color;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 0 0 20px 20px;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-weight: 400;
+    height: 40px;
+    line-height: 35px;
+    padding: 2px 30px;
+    font-size: 15px;
+    @media #{$large-mobile}{
+        padding: 2px 25px;
+    }*/
+}
+#gmap {
+    width: 100%;
+    height: 770px;
+    // Responsive
+    @media #{$desktop-device}{
+        height: 600px;
+    }
+    @media #{$tablet-device}{
+        height: 500px;
+    }
+    @media #{$large-mobile}{
+        height: 400px;
+    }
+    @media #{$small-mobile}{
+    }
+}
